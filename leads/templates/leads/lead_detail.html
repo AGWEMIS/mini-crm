@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href = "{% url 'leads:leads-list' %}">Leads list</a>
+    <hr>
+    <h1> Detail info </h1>
+    <h4>Full name: {{ lead.first_name }} {{ lead.last_name }}</h4>
+    <h4>Age: {{ lead.age }}</h4>
+    <h4>Agent: {{ lead.agent }}</h4>
+    <a href="{% url 'leads:lead-update' lead.pk %}"><button>UPDATE</button></a>
+    <a href="{% url 'leads:lead-delete' lead.pk %}"><button>DELETE</button></a>
+{% endblock content %}

@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <a href = "{% url 'leads:leads-list' %}">Leads list</a>
-    <hr>
-    <h1> Detail info </h1>
-    <h4>Full name: {{ lead.first_name }} {{ lead.last_name }}</h4>
-    <h4>Age: {{ lead.age }}</h4>
-    <h4>Agent: {{ lead.agent }}</h4>
-    <a href="{% url 'leads:lead-update' lead.pk %}"><button>UPDATE</button></a>
-    <a href="{% url 'leads:lead-delete' lead.pk %}"><button>DELETE</button></a>
+    <div class="container">
+        <a href = "{% url 'leads:leads-list' %}">Leads list</a>
+        <hr>
+        <h1> Detail info </h1>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="there should be leads picture.">
+          <div class="card-body">
+            <h5 class="card-title">{{ lead.first_name }} {{ lead.last_name }}</h5>
+            <p class="card-text">Age: {{ lead.age }}</p>
+            <p class="card-text">Agent: {{ lead.agent }}</p>
+            <a href="{% url 'leads:lead-update' lead.pk %}" class="btn btn-warning">UPDATE</a>
+            <a href="{% url 'leads:lead-delete' lead.pk %}" class="btn btn-danger">DELETE</a>
+          </div>
+        </div>
+    </div>
 {% endblock content %}

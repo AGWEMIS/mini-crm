@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand fw-bold" href="#">MiniCRM</a>
+
+    <div class="ms-auto">
+        <a href="#" class="btn btn-outline-light me-2">Login</a>
+        <a href="#" class="btn btn-primary">Register</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">
+            Manage Your Clients Easily
+        </h1>
+
+        <p class="lead text-muted mb-4">
+            Track leads, manage customers, and grow your business with our simple Mini CRM system.
+        </p>
+
+        <a href="#" class="btn btn-primary btn-lg px-5">
+            Get Started
+        </a>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="py-5 bg-white">
+    <div class="container text-center">
+        <h2 class="mb-5 fw-bold">CRM Features</h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card p-4 shadow-sm">
+                    <div class="feature-icon mb-3">👤</div>
+                    <h5>Client Management</h5>
+                    <p class="text-muted">
+                        Store and manage all your client data in one place.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 shadow-sm">
+                    <div class="feature-icon mb-3">📈</div>
+                    <h5>Sales Tracking</h5>
+                    <p class="text-muted">
+                        Track deals and monitor your sales performance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 shadow-sm">
+                    <div class="feature-icon mb-3">📊</div>
+                    <h5>Dashboard Analytics</h5>
+                    <p class="text-muted">
+                        Get insights into your business growth easily.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

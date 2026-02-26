@@ -135,3 +135,4 @@ AUTH_USER_MODEL = 'leads.User'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #cosole used for testing in real we use smtp settings
 LOGIN_REDIRECT_URL = '/leads/'
 LOGOUT_REDIRECT_URL = '/login/'
+LOGIN_URL = '/login/'

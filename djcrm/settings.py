@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-from django.conf.global_settings import STATICFILES_DIRS
+from django.conf.global_settings import STATICFILES_DIRS, LOGOUT_REDIRECT_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,3 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'leads.User'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #cosole used for testing in real we use smtp settings
+LOGIN_REDIRECT_URL = '/leads/'
+LOGOUT_REDIRECT_URL = '/login/'

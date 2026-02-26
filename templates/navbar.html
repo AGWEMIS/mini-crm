@@ -1,0 +1,22 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand fw-bold" href="#">MiniCRM</a>
+
+    <div class="ms-auto">
+        {% if request.user.is_authenticated %}
+        <span class="text-light me-2">
+            Logged in as: {{ request.user.username }}
+        </span>
+
+        <form method="post" action="{% url 'logout' %}" class="d-inline">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-light me-2">
+                Logout
+            </button>
+        </form>
+        {% else %}
+        <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
+        <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
+        {% endif %}
+    </div>
+</nav>

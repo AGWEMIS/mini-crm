@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Agents List</h1>
+            <a href="{% url 'agents:agent-create' %}">
+                Agent Create
+            </a>
+        </div>
+        <hr>
+        <ul class="list-group">
+            {% for agent in agents %}
+            <li class="list-group-item"><a href="{% url 'agents:agent-detail' agent.pk %}">{{ agent }} </a></li>
+            {% endfor %}
+        </Ul>
+    </div>
+{% endblock content %}

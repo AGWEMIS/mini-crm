@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <a href = "{% url 'agents:agents-list' %}">Agents list</a>
+        <hr>
+        <h1> Detail info </h1>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="there should be agents picture.">
+          <div class="card-body">
+            <h5 class="card-title">{{ agent }}</h5>
+            <a href="{% url 'agents:agent-update' agent.pk %}" class="btn btn-warning">UPDATE</a>
+            <a href="{% url 'agents:agent-delete' agent.pk %}" class="btn btn-danger">DELETE</a>
+          </div>
+        </div>
+    </div>
+{% endblock content %}
